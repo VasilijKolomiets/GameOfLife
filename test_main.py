@@ -67,36 +67,37 @@ def test_calculate_alive_neighbors():
 
 class TestIsCorrectCon(object):
     def test_zero_zero(self):
-        assert main.is_correct_con(5, (0, 0)) == True
+        assert main.is_correct_con(5, (0, 0)) is True
 
     def test_zero_positive(self):
-        assert main.is_correct_con(5, (0, 4)) == True
-        assert main.is_correct_con(5, (4, 0)) == True
+        assert main.is_correct_con(5, (0, 4)) is True
+        assert main.is_correct_con(5, (4, 0)) is True
 
     def test_zero_negative(self):
-        assert main.is_correct_con(5, (0, -1)) == False
-        assert main.is_correct_con(5, (-1, 0)) == False
+        assert main.is_correct_con(5, (0, -1)) is False
+        assert main.is_correct_con(5, (-1, 0)) is False
 
     def test_negative(self):
-        assert main.is_correct_con(5, (-1, -6)) == False
-        assert main.is_correct_con(5, (-6, -1)) == False
-        assert main.is_correct_con(5, (-6, -6)) == False
-        assert main.is_correct_con(5, (-1, -1)) == False
+        assert main.is_correct_con(5, (-1, -6)) is False
+        assert main.is_correct_con(5, (-6, -1)) is False
+        assert main.is_correct_con(5, (-6, -6)) is False
+        assert main.is_correct_con(5, (-1, -1)) is False
 
     def test_posirive(self):
-        assert main.is_correct_con(5, (1, 1)) == True
+        assert main.is_correct_con(5, (1, 1)) is True
 
     def test_over_size(self):
-        assert main.is_correct_con(5, (1, 5)) == False
-        assert main.is_correct_con(5, (5, 1)) == False
-        assert main.is_correct_con(5, (1, 6)) == False
-        assert main.is_correct_con(5, (6, 6)) == False
+        assert main.is_correct_con(5, (1, 5)) is False
+        assert main.is_correct_con(5, (5, 1)) is False
+        assert main.is_correct_con(5, (1, 6)) is False
+        assert main.is_correct_con(5, (6, 6)) is False
 
     def test_negative_over_size(self):
-        assert main.is_correct_con(5, (-6, 6)) == False
-        assert main.is_correct_con(5, (6, -6)) == False
-        assert main.is_correct_con(5, (-1, 6)) == False
-        assert main.is_correct_con(5, (-1, 6)) == False
+        assert main.is_correct_con(5, (-6, 6)) is False
+        assert main.is_correct_con(5, (6, -6)) is False
+        assert main.is_correct_con(5, (-1, 6)) is False
+        assert main.is_correct_con(5, (-1, 6)) is False
+
 
 def test_filter_incorrectly_cons():
     cons = [(1, 1),
