@@ -44,7 +44,7 @@ def is_correct_con(size, con):
     return all(0 <= coord <= size - 1 for coord in [x, y])
 
 
-def filter_incorrectly_cons(size, cons):
+def correct_cons(size, cons):
     return filter(lambda x: is_correct_con(size, x), cons)
 
 
@@ -59,7 +59,7 @@ def main():
     board = [(1, 2), (2, 3), (3, 1), (3, 2), (3, 3)]
     print_board(get_board(size, board))
     for _ in xrange(10):
-        board = filter_incorrectly_cons(size, new_step(board))
+        board = correct_cons(size, new_step(board))
         print_board(get_board(size, board))
 
 

@@ -143,12 +143,12 @@ class TestIsCorrectCon(object):
         assert main.is_correct_con(5, (-1, 6)) is False
 
 
-def test_filter_incorrectly_cons():
+def test_correct_cons():
     cons = [(1, 1),
             (-1, 2),
             (1, -1),
             (1, 10)]
-    assert main.filter_incorrectly_cons(5, cons) == [(1, 1)]
+    assert main.correct_cons(5, cons) == [(1, 1)]
 
 
 class TestNewStep(object):
